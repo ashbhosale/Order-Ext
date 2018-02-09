@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-09T21:27:00Z" product-name="orderext">
+		<header/>
+		<body>
+			<trans-unit id="sendername.description">
+				<source>sendername</source>
+			</trans-unit>
+			<trans-unit id="senderaddress.description">
+				<source>senderaddress</source>
+			</trans-unit>
+			<trans-unit id="orderpickupdate.description">
+				<source>orderpickupdate</source>
+			</trans-unit>
+			<trans-unit id="orderdetails.description">
+				<source>orderdetails</source>
+			</trans-unit>
+			<trans-unit id="receivername.description">
+				<source>receivername</source>
+			</trans-unit>
+			<trans-unit id="receiveraddress.description">
+				<source>receiveraddress</source>
+			</trans-unit>
+			<trans-unit id="orderdeliverydate.description">
+				<source>orderdeliverydate</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

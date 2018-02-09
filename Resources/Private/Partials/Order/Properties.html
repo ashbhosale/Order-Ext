@@ -1,0 +1,60 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-orderext" >
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.sendername" />
+		</td>
+		<td>
+		{order.sendername}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.senderaddress" />
+		</td>
+		<td>
+		{order.senderaddress}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.orderpickupdate" />
+		</td>
+		<td>
+		{order.orderpickupdate -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.orderdetails" />
+		</td>
+		<td>
+		{order.orderdetails}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.receivername" />
+		</td>
+		<td>
+		{order.receivername}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.receiveraddress" />
+		</td>
+		<td>
+		{order.receiveraddress}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.orderdeliverydate" />
+		</td>
+		<td>
+		{order.orderdeliverydate -> f:format.date()}
+		</td>
+	</tr>
+</table>
+</html>

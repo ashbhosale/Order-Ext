@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-09T21:27:00Z" product-name="orderext">
+		<header/>
+		<body>
+			<trans-unit id="tx_orderext_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.sendername">
+				<source>Sendername</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.senderaddress">
+				<source>Senderaddress</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.orderpickupdate">
+				<source>Orderpickupdate</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.orderdetails">
+				<source>Orderdetails</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.receivername">
+				<source>Receivername</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.receiveraddress">
+				<source>Receiveraddress</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.orderdeliverydate">
+				<source>Orderdeliverydate</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_orderinfomgt.name">
+				<source>OrderInfoMgt</source>
+			</trans-unit>
+			<trans-unit id="tx_orderext_orderinfomgt.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
