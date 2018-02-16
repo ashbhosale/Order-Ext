@@ -184,6 +184,5 @@ return [
                 'default' => null,
             ],
         ],
-    
     ],
 ];

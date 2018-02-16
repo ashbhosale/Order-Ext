@@ -65,7 +65,7 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function createAction(\OrderExt\Orderext\Domain\Model\Order $newOrder)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('New order created successfully.', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
         $this->orderRepository->add($newOrder);
         $this->redirect('list');
     }
@@ -90,7 +90,7 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function updateAction(\OrderExt\Orderext\Domain\Model\Order $order)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('Order updated successfully', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
         $this->orderRepository->update($order);
         $this->redirect('list');
     }
@@ -103,7 +103,7 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function deleteAction(\OrderExt\Orderext\Domain\Model\Order $order)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('Order deleted successfully', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
         $this->orderRepository->remove($order);
         $this->redirect('list');
     }

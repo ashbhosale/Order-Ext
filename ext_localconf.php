@@ -13,13 +13,13 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Order' => 'create, update, delete'
+                'Order' => 'list, show, new, create, edit, update, delete'
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     orderinfomgt {
@@ -35,14 +35,13 @@ call_user_func(
                 show = *
             }
        }'
-    );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
-			$iconRegistry->registerIcon(
-				'orderext-plugin-orderinfomgt',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:orderext/Resources/Public/Icons/user_plugin_orderinfomgt.svg']
-			);
-		
+        );
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        $iconRegistry->registerIcon(
+            'orderext-plugin-orderinfomgt',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:orderext/Resources/Public/Icons/user_plugin_orderinfomgt.svg']
+        );
     }
 );

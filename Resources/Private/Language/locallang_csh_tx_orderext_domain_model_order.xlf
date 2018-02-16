@@ -24,6 +24,9 @@
 			<trans-unit id="orderdeliverydate.description">
 				<source>orderdeliverydate</source>
 			</trans-unit>
+			<trans-unit id="image.description">
+            				<source>Image</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

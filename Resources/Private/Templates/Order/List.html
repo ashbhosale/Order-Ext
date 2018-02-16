@@ -1,50 +1,63 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<f:layout name="Default" />
+<head>
+	<meta http-equiv="cache-control" content="public">
+</head>
+This Template is responsible for creating a table of domain objects.
 
-	This Template is responsible for creating a table of domain objects.
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
 
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			List.html: keep
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="content">
+	<h1>Listing for Orders</h1>
 
-	<f:section name="content">
-		<h1>Listing for Order</h1>
+	<f:flashMessages />
 
-		<f:flashMessages />
+	<table  class="tx_orderext" >
 
-		<table  class="tx_orderext" >
+		<div class="container">
+
+			<table class="table table-bordered">
+				<thead>
+		<tr>
+
+			<th><f:translate key="tx_orderext_domain_model_order.sendername" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.senderaddress" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.orderpickupdate" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.orderdetails" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.receivername" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.receiveraddress" /></th>
+			<th><f:translate key="tx_orderext_domain_model_order.orderdeliverydate" /></th>
+			
+		</tr>
+
+				</thead>
+				<tbody>
+
+		<f:for each="{orders}" as="order">
 			<tr>
-				<th><f:translate key="tx_orderext_domain_model_order.sendername" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.senderaddress" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.orderpickupdate" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.orderdetails" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.receivername" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.receiveraddress" /></th>
-				<th><f:translate key="tx_orderext_domain_model_order.orderdeliverydate" /></th>
-				<th> </th>
-				<th> </th>
+				<td><span> {order.sendername}</span></td>
+				<td><span> {order.senderaddress}</span></td>
+				<td><span> {order.orderpickupdate -> f:format.date()}</span></td>
+				<td><span> {order.orderdetails}</span></td>
+				<td><span> {order.receivername}</span></td>
+				<td><span> {order.receiveraddress}</span></td>
+				<td><span> {order.orderdeliverydate -> f:format.date()}</span></td>
+
+				<td><f:link.action action="edit" arguments="{order : order}">Edit</f:link.action></td>
+				<td><f:link.action action="delete" arguments="{order : order}">Delete</f:link.action></td>
 			</tr>
-
-			<f:for each="{orders}" as="order">
-				<tr>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.sendername}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.senderaddress}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.orderpickupdate -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.orderdetails}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.receivername}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.receiveraddress}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{order : order}"> {order.orderdeliverydate -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="edit" arguments="{order : order}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{order : order}">Delete</f:link.action></td>
-				</tr>
-			</f:for>
-		</table>
-
-		<f:link.action action="new">New Order</f:link.action>
-	</f:section>
+		</f:for>
+				</tbody>
+	</table>
+		</div>
+	</table>
+	<f:link.action action="new">New Order</f:link.action>
+</f:section>
 </html>

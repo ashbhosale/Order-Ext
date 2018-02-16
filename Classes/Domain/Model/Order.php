@@ -71,17 +71,12 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @return string $sendername
      */
+
     public function getSendername()
     {
         return $this->sendername;
     }
 
-    /**
-     * Sets the sendername
-     *
-     * @param string $sendername
-     * @return void
-     */
     public function setSendername($sendername)
     {
         $this->sendername = $sendername;

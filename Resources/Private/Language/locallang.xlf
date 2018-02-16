@@ -27,6 +27,15 @@
 			<trans-unit id="tx_orderext_domain_model_order.orderdeliverydate">
 				<source>Orderdeliverydate</source>
 			</trans-unit>
+			<trans-unit id="tx_orderext_orderinfomgt.name">
+            	<source>OrderInfoMgt</source>
+            </trans-unit>
+            <trans-unit id="tx_orderext_orderinfomgt.description">
+            	<source></source>
+            </trans-unit>
+			<trans-unit id="tx_orderext_domain_model_order.image">
+            				<source>Image</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -56,5 +56,13 @@
 		{order.orderdeliverydate -> f:format.date()}
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_orderext_domain_model_order.image" />
+		</td>
+		<td>
+			<f:if condition="{order.image}"><f:image image="{order.image}" alt="" width="200"/></f:if>
+		</td>
+	</tr>
 </table>
 </html>
